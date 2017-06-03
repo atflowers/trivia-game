@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <title>3s Co</title>
+  <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <script src="assets/javascript/jQuery.js"></script>
+  <script src="assets/javascript/game.js"></script>
+</head>
+
+<body>
+	<div id="start-page" class="question-container">
+		<p>Hit start to play the quiz!</p>
+		<button type="button" name="btnStart">START</button>
+	</div>
+
+	<div id="main-container" hidden>
+	<header>Three's Company Quiz</header>
+		<div class="question-container">
+			<p class="question-header">Who did Jack replace as a roommate?</p>
+			<input type="radio" name="q1" value="1"> Katie
+			<input type="radio" name="q1" value="2"> Terri
+			<br>
+			<input type="radio" name="q1" value="3" checked="checked"> Bill
+			<input type="radio" name="q1" value="4"> Eleanor
+		</div>
+
+		<div class="question-container">
+			<p class="question-header">Which of these is not the name of a Three’s Company landlord?</p>
+			<input type="radio" name="q2" value="1"/> John
+			<input type="radio" name="q2" value="2"/> Stanley
+			<br>
+			<input type="radio" name="q2" value="3"/> Helen
+			<input type="radio" name="q2" value="4"/> Ralph
+		</div>
+
+		<div class="question-container">
+			<p class="question-header">What was the name of Jack’s restaurant?</p>
+			<input type="radio" name="q3" value="1"> The Frenchie
+			<input type="radio" name="q3" value="2"> Jack's Bistro
+			<br>
+			<input type="radio" name="q3" value="3"> Jack in the Box
+			<input type="radio" name="q3" value="4"> Chez Jack
+		</div>
+
+		<div class="question-container">
+			<p class="question-header">Which neighbor was Mr. Furley obsessed with?</p>
+			<input type="radio" name="q4" value="1"> Lana
+			<input type="radio" name="q4" value="2"> Candy
+			<br>
+			<input type="radio" name="q4" value="3"> Lonnie
+			<input type="radio" name="q4" value="4"> Ruby
+		</div>
+
+		<div class="question-container">
+			<p class="question-header">How did the girls meet Jack?</p>
+			<input type="radio" name="q5" value="1"> A bar
+			<input type="radio" name="q5" value="2"> At work
+			<br>
+			<input type="radio" name="q5" value="3"> Through a friend
+			<input type="radio" name="q5" value="4"> After a party
+		</div>
+		<div class="question-container">
+			<p class="question-header">Where was Jack when the girls met him?</p>
+			<input type="radio" name="q6" value="1"> A party
+			<input type="radio" name="q6" value="2"> An elevator
+			<br>
+			<input type="radio" name="q6" value="3"> The bathtub
+			<input type="radio" name="q6" value="4"> The Kitchen
+		</div>
+
+		<div class="question-container">
+			<p class="question-header">What’s the name of the local watering hole frequented by the Three’s Company characters?</p>
+			<input type="radio" name="q7" value="1"> Cheers
+			<input type="radio" name="q7" value="2"> The Randy Rover
+			<br>
+			<input type="radio" name="q7" value="3"> The Disco Ball
+			<input type="radio" name="q7" value="4"> The Regal Beagle
+		</div>
+
+		<div class="question-container">
+			<p class="question-header">What is the order of appearance for the blonde roommates on the show?</p>
+			<input type="radio" name="q8" value="1"> Chrissy, Cindi, Terri
+			<input type="radio" name="q8" value="2"> Terri, Cindi, Chrissy
+			<br>
+			<input type="radio" name="q8" value="3"> Terri, Chrissy, Cindi
+			<input type="radio" name="q8" value="4"> Cindi, Chrissy, Terri
+		</div>
+
+		<div class="question-container">
+			<p class="question-header">What secret did Jack hide from the landlords throughout the show?</p>
+			<input type="radio" name="q9" value="1"> He had a crush on a roommate
+			<input type="radio" name="q9" value="2"> He was gay
+			<br>
+			<input type="radio" name="q9" value="3"> He was straight
+			<input type="radio" name="q9" value="4"> He had a love child
+		</div>
+
+		<div class="question-container">
+			<p class="question-header">How many bedrooms were in the Three’s Company apartment?</p>
+			<input type="radio" name="q10" value="1"> Studio
+			<input type="radio" name="q10" value="2"> One
+			<br>
+			<input type="radio" name="q10" value="3"> Two
+			<input type="radio" name="q10" value="4"> Three
+		</div>
+
+		<div class="question-container">
+			<p class="question-header">What is the name of Jack’s best friend and sleazy neighbor?</p>
+			<input type="radio" name="q11" value="1"> Leroy
+			<input type="radio" name="q11" value="2"> Biff
+			<br>
+			<input type="radio" name="q11" value="3"> Henry
+			<input type="radio" name="q11" value="4"> Larry
+		</div>
+
+		<div class="question-container">
+			<p class="question-header">Where did Janet work?</p>
+			<input type="radio" name="q12" value="1"> At the mall
+			<input type="radio" name="q12" value="2"> The florist
+			<br>
+			<input type="radio" name="q12" value="3"> The phone company
+			<input type="radio" name="q12" value="4"> A fancy restaurant
+		</div>
+
+		 <button type="button" name="qEnd">Click Me!</button> 
+	</div>
+
+	<div id="end-page" class="question-container" hidden>
+		<p>Congratulations!</p>
+		<p>Your score: <span id="display-score">NONE</span> out of 12. NOT BAD!</p>
+		<button type="button" name="btnReplay">Play Again</button>
+	</div>
+</body>
+
+</html>

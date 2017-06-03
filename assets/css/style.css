@@ -1,0 +1,38 @@
+body {
+	background-image: url("../images/threes_company.png");
+	background-repeat: repeat-y;
+	background-position: center;
+	background-size: cover;
+}
+
+header {
+	text-align: center;
+	border-style: solid;
+    border-width: 15px 0;
+    border-color: rgba(0, 0, 0, .2);
+    padding: 15px 0;
+    font-size: 40px;
+}
+
+#main-container {
+	background-color: rgba(255, 255, 255, .7);
+	margin: auto;
+	width: 50%;
+	border-style: solid;
+    border-width: 0 15px;
+    border-color: rgba(0, 0, 0, .2);
+}
+
+.question-container {
+	text-align: center;
+	padding: 20px 5px;
+	font-size: 30px;
+	border-style: solid;
+    border-width: 0 0 5px 0;
+    border-color: rgba(0, 0, 0, .2);
+}
+
+.question-header {
+	text-decoration: underline;
+	margin-bottom: 10px;
+}
