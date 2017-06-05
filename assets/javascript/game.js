@@ -1,6 +1,8 @@
 var answers = [4,1,2,1,4,3,4,1,3,3,4,2];
 var qName = "";
-var ansCorrect = 0;
+var ansCorrect; // initialized in reset function
+var timeLeft; // initialized in reset function
+var timerID; // clock control variable
 
 $( document ).ready(function() {
 	reset();
@@ -25,17 +27,36 @@ $( document ).ready(function() {
 	$("button[name='btnStart']").click(function(){
     	$("#start-page").hide();
     	$("#main-container").show();
+    	$("#time-container").show();
     	musicOpen.pause();
     	musicPlaying.play();
     	musicPlaying.addEventListener('ended', function() {
         	this.play();
 	    }, false);
+
+	    timerID = setInterval(function() {
+	    	timeLeft--;
+        	$("#time-left").html(timeLeft);
+        	if (timeLeft == 0) {
+        		clearInterval(timerID);
+        		musicPlaying.pause();
+        		musicBumper.play();
+        		// animate red flashing 0
+        		$("#time-left").css("color", "red");
+        		for (var i = 0; i < 4; i++) {
+	        		$("#time-left").fadeOut(500);
+	        		$("#time-left").fadeIn(500);
+	        	}
+        		// play bumber music before switching to end screne
+        	}
+   		}, 1000);
 	});
 
 	$("button[name='qEnd']").click(function(){
     	checkScore();
     	$("#display-score").html(ansCorrect);
     	$("#main-container").hide();
+    	$("#time-container").hide();
     	$("#end-page").show();
     	musicPlaying.pause();
     	musicEnd.play();
@@ -45,6 +66,7 @@ $( document ).ready(function() {
 		reset();
     	$("#end-page").hide();
     	$("#main-container").show();
+    	$("#time-container").show();
     	musicEnd.pause();
     	musicPlaying.play();
 	});
@@ -56,6 +78,7 @@ function reset (){
 		$("input[name='" + qName + "']").prop('checked', false);
 	}
 	ansCorrect = 0;
+	timeLeft = 40;
 }
 
 function checkScore(){

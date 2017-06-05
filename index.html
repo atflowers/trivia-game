@@ -6,7 +6,8 @@
   <title>3s Co</title>
   <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-  <script src="assets/javascript/jQuery.js"></script>
+  <!-- <script src="assets/javascript/jQuery.js"></script> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="assets/javascript/game.js"></script>
 </head>
 
@@ -14,6 +15,10 @@
 	<div id="start-page" class="question-container">
 		<p>Hit start to play the quiz!</p>
 		<button type="button" name="btnStart">START</button>
+	</div>
+
+	<div id="time-container" hidden>
+		<p id="time-left">40</p>
 	</div>
 
 	<div id="main-container" hidden>
@@ -130,7 +135,7 @@
 
 	<div id="end-page" class="question-container" hidden>
 		<p>Congratulations!</p>
-		<p>Your score: <span id="display-score">NONE</span> out of 12. NOT BAD!</p>
+		<p>Your score: <span id="display-score">NONE</span> out of 12.<br>NOT BAD!</p>
 		<button type="button" name="btnReplay">Play Again</button>
 	</div>
 </body>
